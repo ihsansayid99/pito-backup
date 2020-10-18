@@ -66,12 +66,12 @@ const Login = ({ history }) => {
     return (
         <section className="login-clipping w-full">
             <ToastContainer position="top-right" />
-            <div className="clipper"></div>
-            <div className="absolute">
+            <div className="clipper hidden md:block"></div>
+            <div className="hidden md:absolute md:block">
                 <img draggable="false" src={CPLOGIN} alt="pito logo" />
             </div>
             <div className="container mx-auto flex justify-end pt-20">
-                <div className="w-1/2 px-24">
+                <div className="w-full fixed md:w-1/2 md:px-24">
                     <PitoLogo className="mx-auto" />
                     <div className="pt-24 px-10">
                         <form onSubmit={submit}>
