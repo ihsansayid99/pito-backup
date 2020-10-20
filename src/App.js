@@ -12,6 +12,7 @@ import MerchantList from 'pages/merchant-list'
 import UserListing from 'pages/user-list'
 import Tickets from 'pages/tickets'
 import Categories from 'pages/categories'
+import Analytic from 'pages/analytic'
 import NotFound404 from 'pages/404'
 
 //style from tailwindcss
@@ -28,6 +29,7 @@ function App() {
         <PrivateRoute path="/user-list" component={UserListing} />
         <PrivateRoute path="/tickets" component={Tickets} />
         <PrivateRoute path="/categories" component={Categories} />
+        <PrivateRoute path="/analytic" component={Analytic} />
         <Route path="*" component={NotFound404} />
       </Switch>
     </Router>
