@@ -51,7 +51,6 @@ const Login = ({ history }) => {
             username,
             password
         }).then((res) => {
-            console.log(res)
             setAuthorizationHeader(res.token);
             localStorage.setItem('PITO:token', JSON.stringify(res.token))
             toast.success("Berhasil Login !")
