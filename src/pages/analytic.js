@@ -3,7 +3,7 @@ import Sidebar from 'components/SideNavbar'
 
 const Analytic = () => {
     useEffect(() => {
-        document.getElementById("embeded-dashboard").src = "https://embed.app.octoboard.com/embed?token=https://embed.app.octoboard.com/embed?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImF2djlXODd5d2l4bmhlY2luLWNrZ2h3ZjBhbjBzbW8wN3JuYnY3MWd4YmdAb2N0b2JvYXJkLmNvbSIsInBhc3N3b3JkIjoiOTQ4YTRiNzQyMGQ1NjNhYmVmZDk5MzMwODQ1NjY3M2MzZWNmMjE0MGRlYTMwMTQ5YTE5MGRhYTM2NGI2ZjVmMSIsImlhdCI6MTYwMzE5NzE5OH0.frqPI7zSGWk6DSdJSJhu_OzpResHvtlu84Hk-Az_DQ8"
+        document.getElementById("embeded-dashboard").src = "https://embed.agency.octoboard.com/embed?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjlUaGV6a3FyRHVpUUc3MlRXLWNrZ2h6OTNvdzBrbzcwN253NzVpajA5Z2RAb2N0b2JvYXJkLmNvbSIsInBhc3N3b3JkIjoiZjE3MzFlNmU4NDZmNzkxY2RmNGI5ODc0ZmQ0ZmM0ZjVkNDExNmRmZTQ3MDFiNjY2ZWJiMDMxZTYxZjE1YzQ3YyIsImlhdCI6MTYwMzE5ODkzNX0.MMWoExfZQitSdV4bd88oa0Z2jNakX87JCQwmABLwv8Q"
     })
     return (
         <>
