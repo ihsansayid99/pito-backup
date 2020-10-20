@@ -15,12 +15,29 @@ import { ReactComponent as LogoutIcon } from 'assets/images/logout-icon.svg'
 //import components
 import ListMenu from './listMenu/index'
 
+//Import toastify notify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const SideNavbar = () => {
+
+const SideNavbar = ({ history }) => {
     const classNameSVG = "icon mx-auto"
     const [navbarOpen, setNavbarOpen] = React.useState(false);
+    const [token] = React.useState(localStorage.getItem('PITO:token'))
+
+    function logout() {
+        if (token) {
+            toast.success('Berhasil Logout')
+            setTimeout(() => {
+                localStorage.removeItem('PITO:token')
+                window.location.reload();
+            }, 3000);
+        }
+    }
+
     return (
         <>
+            <ToastContainer position="top-right" />
             <div className="w-full md:hidden">
                 <button className="px-4 py-4 md:hidden focus:outline-none float-left" onClick={(e) => { setNavbarOpen(true) }}>
                     <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
@@ -65,7 +82,7 @@ const SideNavbar = () => {
                         <ListMenu linkTo="/categories">
                             <CategoriesIcon className={classNameSVG} />
                         </ListMenu>
-                        <ListMenu linkTo="/">
+                        <ListMenu button="button" logout={logout}>
                             <LogoutIcon className={classNameSVG} />
                         </ListMenu>
                     </section>
