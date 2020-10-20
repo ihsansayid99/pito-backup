@@ -1,10 +1,14 @@
 import React from 'react'
 
+import Sidebar from 'components/SideNavbar'
+import Graph from 'components/Graph'
+
 const Dashboard = () => {
     return (
-        <div>
-            Hello from dashboard
-        </div>
+        <section className="flex flex-col md:flex-row ">
+            <Sidebar />
+            <Graph />
+        </section>
     )
 }
 

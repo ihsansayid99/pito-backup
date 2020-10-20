@@ -16,6 +16,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      xxl: '1600px'
     },
     colors: Colors,
     spacing: {
@@ -119,6 +120,7 @@ module.exports = {
     divideWidth: theme => theme('borderWidth'),
     fill: {
       current: 'currentColor',
+      ...Colors
     },
     flex: {
       '1': '1 1 0%',
