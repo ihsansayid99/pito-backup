@@ -19837,6 +19837,71 @@ item:hover figure.item-image-live svg.icon{
   left: 20%;
 }
 
+.item figure.item-image-user{
+  position: relative;
+  perspective: 10000px;
+}
+
+.item:hover{
+  cursor: pointer
+}
+
+.item:hover figure.item-image-user svg.icon{
+  opacity: 1;
+  cursor: pointer
+}
+
+.item figure.item-image-user svg.icon{
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotateX(-45deg);
+  transition-property: all;
+  transition-duration: 300ms
+}
+
+item:hover figure.item-image-user svg.icon{
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+}
+
+.icon-controller-user svg.icon-at-user{
+  width: 14px;
+}
+
+.icon-socmed-user svg{
+  width: 28px;
+  height: 28px;
+}
+
+.item figure.item-image-user .icon-socmed-user{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.item figure.item-image-user .minute-user{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.favmerchant-at-user svg{
+  width: 95px;
+  height: 95px;
+}
+
+.fp-controller svg{
+  width: 178px;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

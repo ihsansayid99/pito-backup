@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const RenderTBody = ({ itemBody }) => {
     return (
@@ -8,7 +9,7 @@ const RenderTBody = ({ itemBody }) => {
                     return (
                         <tr key={index} className="border-b border-gray-50">
                             <td class="text-center py-3 px-4 text-red-600 font-bold text-sm">{item.id}</td>
-                            <td class="text-center py-3 px-4 text-red-600 font-bold text-sm">{item.merchantName}</td>
+                            <td class="text-center py-3 px-4 text-red-600 font-bold text-sm"><Link className="hover:text-blue-500" to={`/merchant-list/${item.id}`}>{item.merchantName}</Link></td>
                             <td class="text-center py-3 px-4 text-gray-400 font-light"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">{item.email}</a></td>
                             <td class="text-center py-3 px-4 text-gray-400 font-light">{item.totalLivestream}</td>
                             <td class="text-center py-3 px-4 text-gray-400 font-light">{item.totalUpcomingLivestream}</td>

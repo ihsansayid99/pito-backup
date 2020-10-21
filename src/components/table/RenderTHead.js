@@ -6,7 +6,7 @@ const RenderTHead = ({ itemHead }) => {
             {
                 itemHead && itemHead.map((item, index) => {
                     return (
-                        <th class="text-center py-3 px-4 font-semibold text-sm">{item.title}</th>
+                        <th key={index} className="text-center py-3 px-4 font-semibold text-sm">{item.title}</th>
                     )
                 })
             }

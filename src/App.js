@@ -6,13 +6,16 @@ import PrivateRoute from 'Routes/PrivateRoute'
 
 //import pages
 import Login from 'pages/login'
+import ForgorPassword from 'pages/forgotPassword'
 import Dashboard from 'pages/dashboard'
 import LivestreamList from 'pages/livestream-list'
 import MerchantList from 'pages/merchant-list'
+import MerchantDetail from 'pages/merchant-detail'
 import UserListing from 'pages/user-list'
 import Tickets from 'pages/tickets'
 import Categories from 'pages/categories'
 import Analytic from 'pages/analytic'
+import userDetail from 'pages/user-detail'
 import NotFound404 from 'pages/404'
 
 //style from tailwindcss
@@ -23,10 +26,23 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/login" component={Login} />
+        <Route path="/forgot-password" component={ForgorPassword} />
         <PrivateRoute exact path="/" component={Dashboard} />
         <PrivateRoute path="/livestream-list" component={LivestreamList} />
-        <PrivateRoute path="/merchant-list" component={MerchantList} />
-        <PrivateRoute path="/user-list" component={UserListing} />
+        <Route path="/merchant-list"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}/`} component={MerchantList} exact />
+              <PrivateRoute path={`${url}/:id`} component={MerchantDetail} />
+            </>
+          )} />
+        <Route path="/user-list"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}/`} component={UserListing} exact />
+              <PrivateRoute path={`${url}/:id`} component={userDetail} />
+            </>
+          )} />
         <PrivateRoute path="/tickets" component={Tickets} />
         <PrivateRoute path="/categories" component={Categories} />
         <PrivateRoute path="/analytic" component={Analytic} />

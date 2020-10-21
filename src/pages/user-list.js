@@ -4,7 +4,6 @@ import Searchbar from 'components/forms/search'
 import Table from 'components/table/index'
 
 const UserListing = () => {
-
     const tableHeadUser = [
         {
             title: "ID"

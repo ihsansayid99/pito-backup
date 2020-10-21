@@ -7,15 +7,16 @@ import RenderTBodyTickets from './RenderTBodyTickets'
 import RenderTBodyCategory from './RenderTBodyCategory'
 
 const index = ({ itemHead, itemBody, itemBodyUser, itemBodyTickets, itemBodyCategory }) => {
+
     return (
         <>
-            <table class="min-w-full bg-white">
-                <thead class="bg-pink-500 text-gray-700 font-semibold text-lg">
+            <table className="min-w-full bg-white">
+                <thead className="bg-pink-500 text-gray-700 font-semibold text-lg">
                     <tr>
                         <RenderTHead itemHead={itemHead} />
                     </tr>
                 </thead>
-                <tbody class="text-gray-700">
+                <tbody className="text-gray-700">
                     {
                         itemBody && <RenderTBody itemBody={itemBody} />
                     }
