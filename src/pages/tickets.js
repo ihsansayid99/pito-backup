@@ -52,7 +52,7 @@ const Tickets = () => {
             <section className="flex flex-col md:flex-row ">
                 <Sidebar />
                 <div className="pt-20 px-5 w-full">
-                    <div className="flex justify-start">
+                    <div className="tickets flex justify-start">
                         <Hamburger className="mr-4" />
                         <Searchbar />
                     </div>

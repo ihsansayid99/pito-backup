@@ -182,7 +182,26 @@ item:hover figure.item-image-user svg.icon{
     height: 95px;
 }
 
+.fp{
+    height: 100vh;
+}
+.fp-controller{
+    height: 80vh;
+}
 
 .fp-controller svg{
     width: 178px;
+}
+
+.mb-navbar svg{
+    fill: #585959;
+}
+
+.tickets svg{
+    fill: #df472d;
+}
+
+.socmed-icon-login svg{
+    width: 40px;
+    height: 40px;
 }

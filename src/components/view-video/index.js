@@ -21,7 +21,7 @@ const MostviewsVideos = () => {
                 <Link to="/" className="link-wrapped hidden"></Link>
                 <div className="item-meta px-2">
                     <h4 className="font-light text-xl text-gray-700 py-3 -mt-4">Title</h4>
-                    <div className="flex items-center">
+                    <div className="flex flex-wrap items-center">
                         <EyeIcon />
                         <h4 className="ml-2 text-red-700 font-semibold">5.283 <span className="text-gray-900 text-sm font-medium">Views</span></h4>
                         <div className="flex ml-4">
@@ -29,7 +29,7 @@ const MostviewsVideos = () => {
                             <h4 className="ml-2 text-red-700 font-semibold">283 <span className="text-gray-900 text-sm font-medium">Likes</span></h4>
                         </div>
                     </div>
-                    <div className="flex text-xs text-gray-300 mt-2 items-center">
+                    <div className="flex flex-wrap text-xs text-gray-300 mt-2 items-center">
                         <h6>Category 1</h6><div className="rounded-full w-2 h-2 bg-gray-200 mx-2"></div>
                         <h6>Category 2</h6><div className="rounded-full w-2 h-2 bg-gray-200 mx-2"></div>
                         <h6>Category 3</h6>

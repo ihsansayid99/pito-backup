@@ -19,11 +19,11 @@ const Graph = () => {
 
     return (
         <>
-            <section className="w-full md:w-2/5 xll:w-2/4 pb-10 border-r-2 border-gray-500">
+            <section className="w-full md:w-2/5 xll:w-2/4 pb-10 md:border-r-2 md:border-gray-500">
                 <Lines />
                 <Bars />
             </section>
-            <section className="w-full md:w-2/5 xll:w-2/4 py-10 border-r-2 border-gray-500">
+            <section className="w-full md:w-2/5 xll:w-2/4 py-10 md:border-r-2 md:border-gray-500">
                 <SelectForm name="most-view">
                     <option value="" className="text-black">Most Viewed Livestream</option>
                     <option value="" className="text-black">Most Favourite</option>
@@ -38,14 +38,14 @@ const Graph = () => {
             </section>
             <section className="w-1/4 xxl:w-4/12 py-10">
                 <NumberLivestream />
-                <div className="flex-col py-4 border-b-2 border-gray-500">
+                <div className="flex-col py-4 md:border-b-2 md:border-gray-500">
                     <SelectForm name="total-search">
                         <option value="" className="text-black">Top Search Keywords</option>
                         <option value="" className="text-black">Top Search Categories</option>
                     </SelectForm>
                     <TopSearch />
                 </div>
-                <div className="flex-col px-2 py-4 xxl:px-8 border-b-2 border-gray-500">
+                <div className="flex-col px-2 py-4 xxl:px-8 md:border-b-2 md:border-gray-500">
                     <h5 className="text-red-600">Most Favourite Merchant</h5>
                     <FavMerchant />
                 </div>

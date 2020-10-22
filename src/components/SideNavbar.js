@@ -11,6 +11,7 @@ import { ReactComponent as AnalyticIcon } from 'assets/images/analytic-icon.svg'
 import { ReactComponent as TicketIcon } from 'assets/images/ticketsup-icon.svg'
 import { ReactComponent as CategoriesIcon } from 'assets/images/categories-icon.svg'
 import { ReactComponent as LogoutIcon } from 'assets/images/logout-icon.svg'
+import { ReactComponent as Hamburger } from 'assets/images/hamburger.svg'
 
 //import components
 import ListMenu from './listMenu/index'
@@ -38,15 +39,18 @@ const SideNavbar = ({ history }) => {
     return (
         <>
             <ToastContainer position="top-right" />
-            <div className="w-full md:hidden">
-                <button className="px-4 py-4 md:hidden focus:outline-none float-left" onClick={(e) => { setNavbarOpen(true) }}>
-                    <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
-                        <path x-show="!open" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"></path>
-                    </svg>
-                </button>
+            <div className="w-full flex justify-between md:hidden bg-gray-800 items-center">
+                <div className="px-4 py-3">
+                    <PitoLogoSmall />
+                </div>
+                <div className="mb-navbar flex items-center px-4 py-3">
+                    <h5 className="text-white text-sm text-right px-2">Hello, <br /><span className="font-medium text-red-600 text-base">Trumps</span></h5>
+                    <img src={ProfilePicture} className="px-2" alt="" />
+                    <Hamburger />
+                </div>
 
             </div>
-            <div className={["sidebar xl:block", navbarOpen ? "block w-full h-auto bg-gray-800 absolute z-40" : "hidden inset-0"].join(" ")}>
+            <div className="sidebar hidden md:block">
                 <div className="w-full py-4">
                     <button className="px-4 py-4 md:hidden focus:outline-none float-right" onClick={(e) => { setNavbarOpen(false) }}>
                         <svg fill="#FFFFFF" viewBox="0 0 20 20" className="w-6 h-6">

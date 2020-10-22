@@ -6,6 +6,10 @@ import CPLOGIN from 'assets/images/cp-login.png'
 import { ReactComponent as PitoLogo } from 'assets/images/pito.svg'
 import { ReactComponent as LoginIcon } from 'assets/images/login-icon.svg'
 import { ReactComponent as PasswordIcon } from 'assets/images/password-icon.svg'
+import { ReactComponent as FbIcon } from 'assets/images/fb-icon-square.svg'
+import { ReactComponent as GoogleIcon } from 'assets/images/google-icon-colorful.svg'
+import { ReactComponent as GoogleplaySign } from 'assets/images/googleplay-sign.svg'
+import { ReactComponent as AppstoreSign } from 'assets/images/appstore-sign.svg'
 
 
 //import API function
@@ -69,8 +73,8 @@ const Login = ({ history }) => {
             <div className="hidden md:absolute md:block">
                 <img draggable="false" src={CPLOGIN} alt="pito logo" />
             </div>
-            <div className="container mx-auto flex justify-end pt-20">
-                <div className="w-full fixed md:w-1/2 md:px-24">
+            <div className="container mx-auto flex justify-end py-20">
+                <div className="w-full md:w-1/2 md:px-24">
                     <PitoLogo className="mx-auto" />
                     <div className="pt-24 px-10">
                         <form onSubmit={submit}>
@@ -88,6 +92,27 @@ const Login = ({ history }) => {
                             </div>
                         </form>
                     </div>
+
+                    <div className="socmed-icon-login flex justify-center items-center mt-12 md:hidden">
+                        <h6 className="text-lg font-light text-gray-700 px-4">Or Continue with
+                        </h6>
+                        <span className="flex"><FbIcon className="mr-4" /> <GoogleIcon /></span>
+                    </div>
+
+                    <div className="flex flex-col mt-8 md:hidden">
+                        <h6 className="text-lg font-light mx-auto text-gray-700 px-4">Not a member yet?
+                        </h6>
+                        <h6 className="text-lg font-light mx-auto text-gray-700 px-4"><span className="font-medium text-red-600">Create Accout</span> Via Download Pito App
+                        </h6>
+                        <div className="flex px-4 mx-auto">
+                            <GoogleplaySign className="w-40 mr-4" />
+                            <AppstoreSign className="w-40" />
+                        </div>
+                        <div className="px-4 mx-auto">
+                            <h6 className="text-lg font-light text-gray-700 px-4">Contact Pito at admin@pito.com.sg</h6>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
