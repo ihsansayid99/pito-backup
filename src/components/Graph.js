@@ -36,7 +36,7 @@ const Graph = () => {
                 <MostviewsVideos />
                 <MostviewsVideos />
             </section>
-            <section className="w-1/4 xxl:w-4/12 py-10">
+            <section className="w-full xl:w-1/4 xxl:w-4/12 py-10 px-4 md:px-0">
                 <NumberLivestream />
                 <div className="flex-col py-4 md:border-b-2 md:border-gray-500">
                     <SelectForm name="total-search">

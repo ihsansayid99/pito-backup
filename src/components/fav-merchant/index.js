@@ -60,7 +60,7 @@ const index = () => {
                 mostFavMerchant.map((item, index) => {
                     const increment = index + 1
                     return (
-                        <div key={index} className="xl:w-full xxl:w-auto">
+                        <div key={index} className="xl:w-full xxl:w-auto px-6 md:px-6">
                             <div className="mt-3 flex items-center w-1/2 xl:mx-auto xxl:mx-0">
                                 <h6>{increment}.</h6>
                                 <div className="px-2">

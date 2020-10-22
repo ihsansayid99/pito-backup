@@ -51,12 +51,12 @@ const Tickets = () => {
         <>
             <section className="flex flex-col md:flex-row ">
                 <Sidebar />
-                <div className="pt-20 px-5 w-full">
+                <div className="py-20 px-5 w-full">
                     <div className="tickets flex justify-start">
                         <Hamburger className="mr-4" />
                         <Searchbar />
                     </div>
-                    <div className="flex pt-10">
+                    <div className="flex pt-10 overflow-x-auto">
                         <Table itemHead={tableHeadTickets} itemBodyTickets={tableBodyTickets} />
                     </div>
                 </div>

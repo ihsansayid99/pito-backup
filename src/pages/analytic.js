@@ -9,7 +9,7 @@ const Analytic = () => {
         <>
             <section className="flex flex-col md:flex-row ">
                 <Sidebar />
-                <div className="pt-20 px-5 w-full flex">
+                <div className="py-20 px-5 w-full flex">
                     <iframe title="Dashboard Analytic" id="embeded-dashboard" allowtransparency="true" scrolling="no" frameBorder="0" style={{ border: "none", overflow: "hidden", minHeight: "600px", width: "100%" }}></iframe>
                 </div>
             </section>

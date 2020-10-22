@@ -77,11 +77,11 @@ const Categories = () => {
         <>
             <section className="flex flex-col md:flex-row ">
                 <Sidebar />
-                <div className="pt-20 px-5 w-full">
+                <div className="py-20 px-5 w-full">
                     <div className="flex justify-end">
                         <button className="bg-red-600 text-white font-medium text-lg px-4 py-2 rounded-3xl">Add New Category</button>
                     </div>
-                    <div className="flex pt-10">
+                    <div className="flex pt-10 overflow-x-auto">
                         <Table itemHead={tableHeadCategory} itemBodyCategory={tableBodyCategory} />
                     </div>
                 </div>

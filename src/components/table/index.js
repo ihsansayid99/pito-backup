@@ -10,7 +10,7 @@ const index = ({ itemHead, itemBody, itemBodyUser, itemBodyTickets, itemBodyCate
 
     return (
         <>
-            <table className="min-w-full bg-white">
+            <table className="min-w-full divide-y divide-gray-200 bg-white">
                 <thead className="bg-pink-500 text-gray-700 font-semibold text-lg">
                     <tr>
                         <RenderTHead itemHead={itemHead} />

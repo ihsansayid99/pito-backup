@@ -38,15 +38,15 @@ const LivestreamList = () => {
         <>
             <section className="flex flex-col md:flex-row ">
                 <Sidebar />
-                <div className="pt-20 px-5 w-full">
-                    <div className="flex justify-between items-center">
+                <div className="py-20 px-5 w-full">
+                    <div className="flex flex-col md:flex-row md:justify-between items-center">
                         <Searchbar />
-                        <div className="flex items-center">
-                            <h2 className="font-semibold text-lg text-gray-700">Filter</h2>
-                            <div className="flex ml-5">
+                        <div className="flex w-full md:w-auto md:flex-row mt-4 md:mt-0 items-center">
+                            <h2 className="font-semibold text-sm md:text-lg text-gray-700">Filter</h2>
+                            <div className="flex ml-5 w-1/3">
                                 <Dropdown title="Select..." items={items} />
                             </div>
-                            <div className="flex ml-5">
+                            <div className="flex ml-5 w-1/3">
                                 <Dropdown title="Date..." items={itemsDate} />
                             </div>
                         </div>

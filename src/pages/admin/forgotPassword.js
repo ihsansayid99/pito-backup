@@ -5,7 +5,7 @@ const ForgotPassword = () => {
         <div className="fp bg-white md:bg-red-600 md:py-20">
             <div className="fp-controller bg-white md:rounded-2xl md:w-2/5 mx-auto px-6 py-20 xxl:py-40">
                 <Pito className="mx-auto" />
-                <div className="mt-20 xl:mt-16 xxl:mt-32 flex flex-col px-6 md:px-10">
+                <div className="mt-20 xl:mt-16 xxl:mt-32 flex flex-col px-6 md:px-10 ">
                     <h5 className="text-red-600 font-bold text-xl">Forgot Password?</h5>
                     <p className="font-light text-base text-gray-700 mt-4">Enter Your Email Address Registered with Pito</p>
                     <input type="text" placeholder="Email Address" className="mt-4 border border-red-600 rounded-lg w-full px-3 py-4" />

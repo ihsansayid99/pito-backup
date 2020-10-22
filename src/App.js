@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 //import PrivateRoutes
 import PrivateRoute from 'Routes/PrivateRoute'
 
-//import pages
+//import pages admin
 import Login from 'pages/login'
-import ForgorPassword from 'pages/forgotPassword'
+import ForgotPassword from 'pages/forgotPassword'
 import Dashboard from 'pages/dashboard'
 import LivestreamList from 'pages/livestream-list'
 import MerchantList from 'pages/merchant-list'
@@ -18,6 +18,10 @@ import Analytic from 'pages/analytic'
 import userDetail from 'pages/user-detail'
 import NotFound404 from 'pages/404'
 
+//import pages merchant
+import LoginAdmin from 'pages/admin/login'
+import ForgotPasswordAdmin from 'pages/admin/forgotPassword'
+
 //style from tailwindcss
 import 'assets/css/main.css';
 
@@ -26,7 +30,9 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/login" component={Login} />
-        <Route path="/forgot-password" component={ForgorPassword} />
+        <Route path="/forgot-password" component={ForgotPassword} />
+        <Route exact path="/admin/login" component={LoginAdmin} />
+        <Route path="/admin/forgot-password" component={ForgotPasswordAdmin} />
         <PrivateRoute exact path="/" component={Dashboard} />
         <PrivateRoute path="/livestream-list" component={LivestreamList} />
         <Route path="/merchant-list"

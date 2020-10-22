@@ -35,7 +35,7 @@ const LineCustom = () => {
     }
     return (
         <div className="flex-col pt-10 px-4 xxl:px-8 justify-end">
-            <div className="mt-10">
+            <div className="mt-10 w-full" style={{ height: "50vh" }}>
                 <Line data={state}
                     options={{
                         legend: {
@@ -45,9 +45,11 @@ const LineCustom = () => {
                                 fontColor: '#333',
                                 usePointStyle: true,
                                 padding: 34
-                            }
+                            },
+
 
                         },
+                        maintainAspectRatio: false,
                         scales: {
                             yAxes: [{
                                 ticks: {

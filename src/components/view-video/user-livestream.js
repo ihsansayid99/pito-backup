@@ -31,22 +31,22 @@ const UserLivestreamVideos = () => {
                 </div>
                 <Link to="/" className="link-wrapped hidden"></Link>
                 <div className="item-meta px-4 w-2/3">
-                    <h4 className="font-semibold text-xl text-gray-700">Title</h4>
-                    <p className="font-light text-sm text-gray-700">
+                    <h4 className="font-semibold text-lg md:text-xl text-gray-700">Title</h4>
+                    <p className="font-light mt-2 text-xs md:text-sm text-justify text-gray-700">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div className="icon-controller-user flex flex-wrap items-center py-2">
-                        <div className="flex items-center">
+                        <div className="flex mr-2 md:mr-4 items-center">
                             <EyeIcon className="icon-at-user" />
-                            <h4 className="ml-2 text-gray-900 text-sm font-medium">52K Views</h4>
+                            <h4 className="ml-2 text-gray-900 text-xs md:text-sm font-medium">52K Views</h4>
                         </div>
-                        <div className="flex ml-4 items-center">
+                        <div className="flex mr-2 md:mr-4 items-center">
                             <LikeIcon className="icon-at-user" />
-                            <h4 className="ml-2 text-gray-900 text-sm font-medium">283 Likes</h4>
+                            <h4 className="ml-2 text-gray-900 text-xs md:text-sm  font-medium">283 Likes</h4>
                         </div>
-                        <div className="flex xxl:ml-4 items-center">
+                        <div className="flex mr-2 md:mr-4 items-center">
                             <CalendarIcon className="icon-at-user" />
-                            <h4 className="ml-2 text-gray-900 text-sm font-medium">283 Likes</h4>
+                            <h4 className="ml-2 text-gray-900 text-xs md:text-sm  font-medium">283 Likes</h4>
                         </div>
                     </div>
                     <div className="flex flex-wrap text-xs text-gray-400 items-center">

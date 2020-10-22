@@ -80,11 +80,11 @@ const MerchantListing = () => {
         <>
             <section className="flex flex-col md:flex-row ">
                 <Sidebar />
-                <div className="pt-20 px-5 w-full">
+                <div className="py-20 px-5 w-full">
                     <div className="flex justify-between">
                         <Searchbar />
                     </div>
-                    <div className="flex pt-10">
+                    <div className="flex pt-10 overflow-x-auto">
                         <Table itemHead={tableHeadMerchant} itemBody={tableBodyMerchant} />
                     </div>
                 </div>

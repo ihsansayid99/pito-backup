@@ -60,33 +60,32 @@ const UserDetail = ({ match }) => {
             <section className="flex flex-col md:flex-row">
                 <Sidebar />
 
-                <div className="pt-20 flex w-full">
-                    <div className="w-3/5 px-4">
+                <div className="py-10 md:py-20 flex-col md:flex md:flex-row w-full">
+                    <div className="w-full md:w-3/5 px-4">
                         <div className="flex items-center">
                             <img src={userAvatarDummy} draggable={false} className="rounded-full w-1/3 border-8 mr-4 border-red-600 mx-auto" alt="" />
                             {
                                 tableBodyUser.filter(x => x.id === match.params.id).map(x => {
                                     return (
-                                        <div key={x.id} className="px-8">
-                                            <h4 className="text-red-600 text-2xl font-bold">{x.username}</h4>
-                                            <p className="text-lg mt-4">{x.email}</p>
-                                            <div className="flex flex-wrap">
-                                                <button className="flex items-center shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
+                                        <div key={x.id} className="md:px-8">
+                                            <h4 className="text-red-600 md:text-2xl font-bold">{x.username}</h4>
+                                            <p className="md:text-lg mt-4">{x.email}</p>
+                                            <div className="md:flex flex-wrap hidden ">
+                                                <button className="flex items-center text-sm md:text-base shadow-md mr-1 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
                                                     <FbIcon className="mr-3" /> Connected
                                                 </button>
-                                                <button className="flex items-center shadow-md px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
+                                                <button className="flex items-center text-sm md:text-base shadow-md px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
                                                     <GoogleIcon className="mr-3" /> Connected
                                                 </button>
-                                                <button className="flex items-center shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
+                                                <button className="flex items-center text-sm md:text-base shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
                                                     <EmailIcon className="mr-3" /> Connected
                                                 </button>
-
                                             </div>
                                             <div className="flex">
-                                                <button className="font-semibold mr-4 px-8 mt-4 py-2 rounded-md bg-red-600 text-white">
+                                                <button className="font-semibold mr-2 md:mr-4 text-sm md:text-base px-8 mt-4 md:py-2 rounded-md bg-red-600 text-white">
                                                     Merchant
                                                 </button>
-                                                <button className="font-semibold px-6 mt-4 py-2 rounded-md bg-gray-400 text-white">
+                                                <button className="font-semibold px-6 mr-2 md:mr-4 text-sm md:text-base mt-4 py-2 whitespace-no-wrap md:py-2 rounded-md bg-gray-400 text-white">
                                                     Non Merchant
                                                 </button>
                                             </div>
@@ -95,31 +94,51 @@ const UserDetail = ({ match }) => {
                                 })
                             }
                         </div>
-                        <div className="flex flex-col pt-16">
-                            <div className="flex justify-end">
-                                <Dropdown title="Most Recent" items={MostList} />
+                        <div className="user-detail flex md:hidden ">
+                            <button className="flex items-center text-sm md:text-base shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
+                                <FbIcon className="mr-3" /> Connect
+                                                </button>
+                            <button className="flex items-center text-sm md:text-base shadow-md px-6 mt-4 mr-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
+                                <GoogleIcon className="mr-3" /> Connect
+                                                </button>
+                            <button className="flex items-center text-sm md:text-base shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
+                                <EmailIcon className="mr-3" /> Email
+                                                </button>
+                        </div>
+                        <div className="flex flex-col-reverse">
+                            <div className="flex flex-col pt-16">
+                                <div className="flex md:justify-between items-center">
+                                    <p className="px-6 text-red-600 font-bold text-base">Favorite Livestreams</p>
+                                    <Dropdown title="Most Recent" items={MostList} />
+                                </div>
+                                <div className="px-2">
+                                    <UserLivestreamVideos />
+                                    <UserLivestreamVideos />
+                                </div>
                             </div>
-                            <p className="px-6 text-red-600 font-bold text-base">Favorite Livestreams</p>
-                            <div className="px-6">
-                                <UserLivestreamVideos />
-                                <UserLivestreamVideos />
+                            <div className="pt-6 px-4 block md:hidden">
+                                <h5 className="text-gray-700 font-light text-lg">Change Display Name</h5>
+                                <input type="text" placeholder="Display Name" className="rounded-lg border w-full border-gray-50 px-2 py-2 my-2 focus:outline-none" />
+                                <div className="w-full mt-2">
+                                    <button className="rounded-xl float-right px-10 py-3 bg-red-600 text-white text-sm md:text-lg font-medium">Save</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="w-2/5 px-4 flex flex-col">
-                        <div className="pt-20 px-4">
+                    <div className="w-full md:w-2/5 px-4 flex flex-col">
+                        <div className="pt-20 px-4 hidden md:block">
                             <h5 className="text-gray-700 font-light text-lg">Change Display Name</h5>
                             <input type="text" placeholder="Display Name" className="rounded-lg border w-4/5 border-gray-50 px-2 py-2 my-2 focus:outline-none" />
                             <div className="w-4/5 mt-2">
                                 <button className="rounded-3xl float-right px-10 py-3 bg-red-600 text-white text-lg font-medium">Save</button>
                             </div>
                         </div>
-                        <div className="pt-8 flex flex-col px-4">
-                            <div className="flex justify-end">
+                        <div className="pt-10 md:pt-8 flex flex-col px-4">
+                            <div className="flex justify-between items-center">
+                                <p className="text-red-600 font-bold text-base">Favorite Merchants</p>
                                 <Dropdown title="Most Recent" items={MostRecent2} />
                             </div>
-                            <div className="pt-6 px-6 ">
-                                <p className="text-red-600 font-bold text-base">Favorite Merchants</p>
+                            <div className="pt-6">
                                 <div className="favmerchant-at-user flex w-full mt-4">
                                     <AvatarDummy />
                                     <div className="px-4">

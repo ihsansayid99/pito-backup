@@ -19837,6 +19837,37 @@ item:hover figure.item-image-live svg.icon{
   left: 20%;
 }
 
+@media all and (max-width: 640px) {
+  .item-image-live .thumbnail-live{
+    width: 400px
+  }
+
+  .item figure.item-image-live .live-viewers{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+  }
+
+  .item figure.item-image-live .live-viewers-wrap{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+  }
+
+  .user-detail button svg{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.share-icon-live svg{
+  width: 40px;
+  height: 40px;
+  fill: #404041;
+}
+
 .item figure.item-image-user{
   position: relative;
   perspective: 10000px;
