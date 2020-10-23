@@ -266,7 +266,12 @@ item:hover figure.item-image-live-detail svg.icon{
     width: 15%;
 }
 
+<<<<<<< HEAD
 @media all and (max-width: 640px) {
+=======
+
+@media only screen and (min-width: 320px) {
+>>>>>>> responsive all dashboard admin
     .item-image-live .thumbnail-live{
         width: 400px
     }
@@ -297,4 +302,18 @@ item:hover figure.item-image-live-detail svg.icon{
     .notif-minute{
         width: 25%;
     }
+<<<<<<< HEAD
 }
+=======
+
+    .item-image img{
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .item-image img{
+        width: 700px;
+    }
+}
+>>>>>>> responsive all dashboard admin

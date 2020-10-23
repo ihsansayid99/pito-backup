@@ -38,7 +38,11 @@ const SideNavbar = ({ history }) => {
     return (
         <>
             <ToastContainer position="top-right" />
+<<<<<<< HEAD
             <div className="w-full flex justify-between md:hidden bg-gray-800 items-center">
+=======
+            <div className="w-full flex justify-between xl:hidden bg-gray-800 items-center">
+>>>>>>> responsive all dashboard admin
                 <div className="px-4 py-3">
                     <PitoLogoSmall />
                 </div>
@@ -49,7 +53,11 @@ const SideNavbar = ({ history }) => {
                 </div>
 
             </div>
+<<<<<<< HEAD
             <div className="sidebar hidden md:block">
+=======
+            <div className="sidebar hidden xl:block">
+>>>>>>> responsive all dashboard admin
                 <div className="w-full py-4">
                     <button className="px-4 py-4 md:hidden focus:outline-none float-right">
                         <svg fill="#FFFFFF" viewBox="0 0 20 20" className="w-6 h-6">
