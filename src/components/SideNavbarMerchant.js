@@ -67,10 +67,10 @@ const SideNavbarMerchant = ({ history }) => {
                         <ListMenu linkTo="/merchant/profile">
                             <ProfileIcon className={classNameSVG} />
                         </ListMenu>
-                        <ListMenu linkTo="/merchant/dashboard">
+                        <ListMenu linkTo="/merchant/notification">
                             <NotificationIcon className={classNameSVG} />
                         </ListMenu>
-                        <ListMenu linkTo="/tickets">
+                        <ListMenu linkTo="/merchant/support">
                             <TicketIcon className={classNameSVG} />
                         </ListMenu>
                         <ListMenu button="button" logout={logout}>

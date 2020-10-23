@@ -8,6 +8,7 @@ import { ReactComponent as TtIcon } from 'assets/images/tiktok-icon.svg'
 import Dropdown from 'components/forms/dropdown'
 import LineCustom from 'components/graphic-chart/LineCustom'
 import HistoryLivestreams from 'components/view-video/user-livestream'
+import { Link } from 'react-router-dom'
 
 const Profile = () => {
     const tableBodyUser = [
@@ -83,7 +84,7 @@ const Profile = () => {
                             </div>
                         </div>
                         <div className="flex justify-end pt-8">
-                            <button className="rounded-3xl text-sm md:text-base font-medium mr-2 md:mr-6 text-white bg-red-600 px-6 py-2 md:px-10 md:py-2">Edit Account</button>
+                            <Link to="/merchant/profile/edit"><button className="rounded-3xl text-sm md:text-base font-medium mr-2 md:mr-6 text-white bg-red-600 px-6 py-2 md:px-10 md:py-2">Edit Account</button></Link>
                         </div>
                         <div className="pt-8">
                             <LineCustom />

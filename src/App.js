@@ -26,6 +26,9 @@ import CreateDashboardMerchant from 'pages/merchant/createDashboard'
 import EditDashboardMerchant from 'pages/merchant/editDashboard'
 import ProfileMerchant from 'pages/merchant/profile'
 import LivestreamDetail from 'pages/merchant/livestreamDetail'
+import Notif from 'pages/merchant/notif'
+import Support from 'pages/merchant/support'
+import ProfileEdit from 'pages/merchant/profileEdit'
 
 //style from tailwindcss
 import 'assets/css/main.css';
@@ -69,6 +72,7 @@ function App() {
           render={({ match: { url } }) => (
             <>
               <PrivateRoute path={`${url}/`} component={ProfileMerchant} exact />
+              <PrivateRoute path={`${url}/edit`} component={ProfileEdit} />
             </>
           )} />
         <Route path="/merchant/livestream"
@@ -77,6 +81,19 @@ function App() {
               <PrivateRoute path={`${url}/:id`} component={LivestreamDetail} />
             </>
           )} />
+        <Route path="/merchant/notification"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}`} component={Notif} exact />
+            </>
+          )} />
+        <Route path="/merchant/support"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}`} component={Support} exact />
+            </>
+          )} />
+
         <Route path="*" component={NotFound404} />
       </Switch>
     </Router>

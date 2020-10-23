@@ -5,12 +5,13 @@ import RenderTBody from './RenderTBody'
 import RenderTBodyUserListing from './RenderTBodyUserListing'
 import RenderTBodyTickets from './RenderTBodyTickets'
 import RenderTBodyCategory from './RenderTBodyCategory'
+import { RenderTBodySupport } from './RenderTBodySupport'
 
-const index = ({ itemHead, itemBody, itemBodyUser, itemBodyTickets, itemBodyCategory }) => {
+const index = ({ itemHead, itemBody, itemBodyUser, itemBodyTickets, itemBodyCategory, itemBodySupport }) => {
 
     return (
         <>
-            <table className="min-w-full divide-y divide-gray-200 bg-white">
+            <table className="w-full divide-y divide-gray-200 bg-white">
                 <thead className="bg-pink-500 text-gray-700 font-semibold text-lg">
                     <tr>
                         <RenderTHead itemHead={itemHead} />
@@ -29,6 +30,9 @@ const index = ({ itemHead, itemBody, itemBodyUser, itemBodyTickets, itemBodyCate
                     }
                     {
                         itemBodyCategory && <RenderTBodyCategory itemBodyCategory={itemBodyCategory} />
+                    }
+                    {
+                        itemBodySupport && <RenderTBodySupport itemBodySupport={itemBodySupport} />
                     }
                 </tbody>
             </table>
