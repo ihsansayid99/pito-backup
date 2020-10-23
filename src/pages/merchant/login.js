@@ -88,7 +88,7 @@ const Login = ({ history }) => {
                             </div>
                             <button type="submit" className="bg-red-600 py-2 px-10 w-full mt-6 text-xl rounded-3xl text-white font-medium hover:bg-red-700 transition-all duration-200 focus:outline-none">Login</button>
                             <div className="text-center mt-4">
-                                <Link to="/admin/forgot-password" className="text-red-600 border-b border-red-600 font-light hover:font-medium">Forgot Password?</Link>
+                                <Link to="/merchant/forgot-password" className="text-red-600 border-b border-red-600 font-light hover:font-medium">Forgot Password?</Link>
                             </div>
                         </form>
                     </div>

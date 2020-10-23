@@ -36,15 +36,15 @@ const UserLivestreamVideos = () => {
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div className="icon-controller-user flex flex-wrap items-center py-2">
-                        <div className="flex mr-2 md:mr-4 items-center">
+                        <div className="flex mr-4 items-center">
                             <EyeIcon className="icon-at-user" />
                             <h4 className="ml-2 text-gray-900 text-xs md:text-sm font-medium">52K Views</h4>
                         </div>
-                        <div className="flex mr-2 md:mr-4 items-center">
+                        <div className="flex mr-4 items-center">
                             <LikeIcon className="icon-at-user" />
                             <h4 className="ml-2 text-gray-900 text-xs md:text-sm  font-medium">283 Likes</h4>
                         </div>
-                        <div className="flex mr-2 md:mr-4 items-center">
+                        <div className="flex mr-4 items-center">
                             <CalendarIcon className="icon-at-user" />
                             <h4 className="ml-2 text-gray-900 text-xs md:text-sm  font-medium">283 Likes</h4>
                         </div>

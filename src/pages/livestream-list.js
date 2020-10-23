@@ -3,6 +3,7 @@ import Sidebar from 'components/SideNavbar'
 import Searchbar from 'components/forms/search'
 import Dropdown from 'components/forms/dropdown'
 import FullWidth from 'components/view-video/FullWidth'
+import thumbnail from 'assets/images/thumbnail-one.jpg'
 
 const itemsDate = [
     {
@@ -31,6 +32,26 @@ const items = [
     }
 ]
 
+const videos = [
+    {
+        id: 1,
+        thumbnail: thumbnail,
+        live: true,
+        views: 260.000,
+        shared: 989,
+        status: "Live Now",
+        title: "Tomy W"
+    },
+    {
+        id: 2,
+        thumbnail: thumbnail,
+        live: false,
+        views: 260.000,
+        shared: 989,
+        date: "12",
+        title: "Tomy W"
+    },
+]
 
 
 const LivestreamList = () => {
@@ -51,7 +72,10 @@ const LivestreamList = () => {
                             </div>
                         </div>
                     </div>
-                    <FullWidth />
+                    <div className="my-10">
+                        <FullWidth dataVideos={videos} socmedVertical={true} liveRecord={true} name={true} subtitle={true} caption={true} category={true}
+                            buttons={true} />
+                    </div>
                 </div>
             </section>
         </>

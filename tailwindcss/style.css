@@ -233,3 +233,43 @@ item:hover figure.item-image-user svg.icon{
     width: 40px;
     height: 40px;
 }
+
+.merchant-dashboard svg{
+    width: 32px;
+    height: 32px;
+}
+
+.merchant-dashboard svg{
+    fill: #404041;
+}
+
+.form-dashboard svg{
+    fill: #404041;
+}
+
+.item figure.item-image-live-detail{
+    position: relative;
+    perspective: 10000px;
+}
+
+.item:hover figure.item-image-live-detail svg.icon{
+    @apply .opacity-100 .cursor-pointer
+}
+
+.item figure.item-image-live-detail svg.icon{
+    width: 40px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotateX(-45deg);
+    @apply .transition-all .duration-300
+}
+
+item:hover figure.item-image-live-detail svg.icon{
+    opacity: 1; 
+    transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+}

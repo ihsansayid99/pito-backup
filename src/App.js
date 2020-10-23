@@ -19,8 +19,13 @@ import userDetail from 'pages/user-detail'
 import NotFound404 from 'pages/404'
 
 //import pages merchant
-import LoginAdmin from 'pages/admin/login'
-import ForgotPasswordAdmin from 'pages/admin/forgotPassword'
+import LoginMerchant from 'pages/merchant/login'
+import ForgotPasswordMerchant from 'pages/merchant/forgotPassword'
+import DashboardMerchant from 'pages/merchant/dashboard'
+import CreateDashboardMerchant from 'pages/merchant/createDashboard'
+import EditDashboardMerchant from 'pages/merchant/editDashboard'
+import ProfileMerchant from 'pages/merchant/profile'
+import LivestreamDetail from 'pages/merchant/livestreamDetail'
 
 //style from tailwindcss
 import 'assets/css/main.css';
@@ -31,8 +36,6 @@ function App() {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route path="/forgot-password" component={ForgotPassword} />
-        <Route exact path="/admin/login" component={LoginAdmin} />
-        <Route path="/admin/forgot-password" component={ForgotPasswordAdmin} />
         <PrivateRoute exact path="/" component={Dashboard} />
         <PrivateRoute path="/livestream-list" component={LivestreamList} />
         <Route path="/merchant-list"
@@ -52,6 +55,28 @@ function App() {
         <PrivateRoute path="/tickets" component={Tickets} />
         <PrivateRoute path="/categories" component={Categories} />
         <PrivateRoute path="/analytic" component={Analytic} />
+        <Route exact path="/merchant/login" component={LoginMerchant} />
+        <Route path="/merchant/forgot-password" component={ForgotPasswordMerchant} />
+        <Route path="/merchant/dashboard"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}/`} component={DashboardMerchant} exact />
+              <PrivateRoute path={`${url}/create`} component={CreateDashboardMerchant} />
+              <PrivateRoute path={`${url}/edit`} component={EditDashboardMerchant} />
+            </>
+          )} />
+        <Route path="/merchant/profile"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}/`} component={ProfileMerchant} exact />
+            </>
+          )} />
+        <Route path="/merchant/livestream"
+          render={({ match: { url } }) => (
+            <>
+              <PrivateRoute path={`${url}/:id`} component={LivestreamDetail} />
+            </>
+          )} />
         <Route path="*" component={NotFound404} />
       </Switch>
     </Router>
