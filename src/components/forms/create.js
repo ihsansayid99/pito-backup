@@ -7,7 +7,7 @@ import { ReactComponent as UploadIcon } from 'assets/images/upload-icon.svg'
 const Create = () => {
     return (
         <>
-            <div className="w-full md:w-4/5">
+            <div className="w-full xl:w-4/5">
                 <form>
                     <div className="flex flex-wrap w-full items-start">
                         <label htmlFor="title" className="w-full md:w-1/5 text-lg text-gray-700">Title <span className="text-red-700">*</span></label>
@@ -63,7 +63,7 @@ const Create = () => {
                     </div>
                     <div className="form-dashboard flex flex-wrap w-full items-center mt-4">
                         <UploadIcon />
-                        <input type="file" className="w-4/5 md:w-2/5 px-4 py-2 mx-2 md:mx-4 border border-gray-300 rounded-lg" />
+                        <input type="file" className="w-4/5 xl:w-2/5 px-4 py-2 mx-2 md:mx-4 border border-gray-300 rounded-lg" />
                     </div>
                     <div className="flex mt-6">
                         <button className="border border-gray-300 text-red-600 rounded-lg text-lg px-6 py-2 mr-4">Cancel</button>

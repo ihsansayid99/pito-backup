@@ -10,14 +10,14 @@ import thumbnail from 'assets/images/thumbnail-one.jpg'
 const livestreamDetail = () => {
     return (
         <>
-            <section className="flex flex-col md:flex-row">
+            <section className="flex flex-col xl:flex-row">
                 <SideNavbarMerchant />
                 <div className="py-10 md:py-20 px-5 w-full">
                     <div className="flex flex-col-reverse md:flex-row w-full justify-between">
                         <h6 className="text-red-600 font-semibold text-lg text-center pt-8 md:pt-0">Livestreams Detail</h6>
                         <div className="flex items-center md:mb-0 justify-end">
                             <Link to="/merchant/dashboard"><h6 className="text-red-600 font-semibold text-lg">Back</h6></Link>
-                            <button className="text-white bg-red-600 font-semibold text-lg px-4 mx-4 py-1 rounded-2xl">Copy For New Livestreams</button>
+                            <button className="text-white bg-red-600 font-semibold text-sm xl:text-lg px-4 mx-4 py-1 rounded-2xl">Copy For New Livestreams</button>
                         </div>
                     </div>
                     <div className="mt-0 md:mt-10">
@@ -43,38 +43,38 @@ const livestreamDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row pt-10">
-                        <div className="w-full md:w-1/2">
+                    <div className="flex flex-col xl:flex-row pt-10">
+                        <div className="w-full xl:w-1/2">
                             <div className="flex flex-wrap w-full items-start">
-                                <label htmlFor="title" className="w-full md:w-1/5 text-lg text-gray-700">Title</label>
-                                <input type="text" placeholder="Tittle" className="w-full md:w-3/4 px-4 bg-gray-700 text-white focus:outline-none py-2 my-2 md:my-0 md:ml-4 rounded-lg" readOnly />
+                                <label htmlFor="title" className="w-full xl:w-1/5 text-lg text-gray-700">Title</label>
+                                <input type="text" placeholder="Tittle" className="w-full xl:w-3/4 px-4 bg-gray-700 text-white focus:outline-none py-2 my-2 xl:my-0 xl:ml-4 rounded-lg" readOnly />
                             </div>
                             <div className="flex flex-wrap w-full items-start mt-4">
-                                <label htmlFor="desc" className="w-full md:w-1/5 text-lg text-gray-700">Description</label>
-                                <textarea placeholder="Description" className="w-full md:w-3/4 h-32 px-4 bg-gray-700 text-white focus:outline-none py-2 md:ml-4 my-2 md:my-0 rounded-lg" readOnly />
+                                <label htmlFor="desc" className="w-full xl:w-1/5 text-lg text-gray-700">Description</label>
+                                <textarea placeholder="Description" className="w-full xl:w-3/4 h-32 px-4 bg-gray-700 text-white focus:outline-none py-2 xl:ml-4 my-2 xl:my-0 rounded-lg" readOnly />
                             </div>
                         </div>
-                        <div className="w-full md:w-1/2">
+                        <div className="w-full xl:w-1/2">
                             <div className="flex flex-wrap w-full items-center">
-                                <div className="md:pr-4 flex flex-wrap md:flex-no-wrap w-full md:w-1/2">
-                                    <label htmlFor="date" className="w-full md:w-1/5 text-lg text-gray-700">Date</label>
-                                    <input type="text" name="date" className="w-full md:w-3/4 px-4 py-2 md:ml-4  bg-gray-700 text-white focus:outline-none my-2 md:my-0 border border-gray-300 rounded-lg" readOnly />
+                                <div className="xl:pr-4 flex flex-wrap xl:flex-no-wrap w-full xl:w-1/2">
+                                    <label htmlFor="date" className="w-full xl:w-1/5 text-lg text-gray-700">Date</label>
+                                    <input type="text" name="date" className="w-full xl:w-3/4 px-4 py-2 xl:ml-4  bg-gray-700 text-white focus:outline-none my-2 xl:my-0 border border-gray-300 rounded-lg" readOnly />
                                 </div>
-                                <div className="md:pr-4 flex flex-wrap md:flex-no-wrap w-full md:w-1/2">
-                                    <label htmlFor="start" className="w-full md:w-1/5 text-lg text-gray-700">Start Time</label>
-                                    <input type="text" name="start" className="w-full md:w-3/4 px-4 py-2 md:ml-4  bg-gray-700 text-white focus:outline-none my-2 md:my-0 border border-gray-300 rounded-lg" readOnly />
+                                <div className="xl:pr-4 flex flex-wrap xl:flex-no-wrap w-full xl:w-1/2">
+                                    <label htmlFor="start" className="w-full xl:w-1/5 text-lg text-gray-700">Start Time</label>
+                                    <input type="text" name="start" className="w-full xl:w-3/4 px-4 py-2 xl:ml-4  bg-gray-700 text-white focus:outline-none my-2 xl:my-0 border border-gray-300 rounded-lg" readOnly />
                                 </div>
-                                <div className="md:pr-4 flex flex-wrap md:flex-no-wrap w-full md:mt-4 md:w-1/2">
-                                    <label htmlFor="end" className="w-full md:w-1/5 text-lg text-gray-700">End Time</label>
-                                    <input type="text" name="start" className="w-full md:w-3/4 px-4 py-2 md:ml-4  bg-gray-700 text-white focus:outline-none my-2 md:my-0 border border-gray-300 rounded-lg" readOnly />
+                                <div className="xl:pr-4 flex flex-wrap xl:flex-no-wrap w-full xl:mt-4 xl:w-1/2">
+                                    <label htmlFor="end" className="w-full xl:w-1/5 text-lg text-gray-700">End Time</label>
+                                    <input type="text" name="start" className="w-full xl:w-3/4 px-4 py-2 xl:ml-4  bg-gray-700 text-white focus:outline-none my-2 xl:my-0 border border-gray-300 rounded-lg" readOnly />
                                 </div>
                             </div>
                             <div className="flex flex-wrap w-full items-center mt-4">
-                                <label htmlFor="category" className="w-full md:w-auto text-lg text-gray-700">Categories</label>
+                                <label htmlFor="category" className="w-full xl:w-auto text-lg text-gray-700">Categories</label>
                                 <div className="flex flex-wrap">
-                                    <input type="text" name="category" className="w-1/3 md:w-auto px-4 py-2 mr-4 text-sm bg-gray-700 text-white focus:outline-none my-2  border border-gray-300 rounded-lg" readOnly />
-                                    <input type="text" name="category" className="w-1/3 md:w-auto px-4 py-2 mr-4 text-sm bg-gray-700 text-white focus:outline-none my-2  border border-gray-300 rounded-lg" readOnly />
-                                    <input type="text" name="category" className="w-1/3 md:w-auto px-4 py-2 mr-4 text-sm bg-gray-700 text-white focus:outline-none my-2  border border-gray-300 rounded-lg" readOnly />
+                                    <input type="text" name="category" className="w-1/3 xl:w-auto px-4 py-2 mr-4 text-sm bg-gray-700 text-white focus:outline-none my-2  border border-gray-300 rounded-lg" readOnly />
+                                    <input type="text" name="category" className="w-1/3 xl:w-auto px-4 py-2 mr-4 text-sm bg-gray-700 text-white focus:outline-none my-2  border border-gray-300 rounded-lg" readOnly />
+                                    <input type="text" name="category" className="w-1/3 xl:w-auto px-4 py-2 mr-4 text-sm bg-gray-700 text-white focus:outline-none my-2  border border-gray-300 rounded-lg" readOnly />
                                 </div>
 
                             </div>

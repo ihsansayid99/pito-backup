@@ -5,7 +5,7 @@ import Create from 'components/forms/create'
 const CreateDashboard = () => {
     return (
         <>
-            <section className="flex flex-col md:flex-row">
+            <section className="flex flex-col xl:flex-row">
                 <SideNavbarMerchant />
                 <div className="py-10 md:py-20 px-5 w-full">
                     <h6 className="text-red-600 font-bold text-lg">Create Livestreams</h6>

@@ -5,7 +5,6 @@ import userAvatarDummy from 'assets/images/user-avatar.jpg'
 import { ReactComponent as FbIcon } from 'assets/images/fb-icon-blue.svg'
 import { ReactComponent as EmailIcon } from 'assets/images/email-icon.svg'
 import { ReactComponent as GoogleIcon } from 'assets/images/google-icon-colorful.svg'
-import { Link } from 'react-router-dom'
 
 const profileEdit = () => {
     const tableBodyUser = [
@@ -20,30 +19,30 @@ const profileEdit = () => {
     ]
     return (
         <>
-            <section className="flex flex-col md:flex-row">
+            <section className="flex flex-col xl:flex-row">
                 <SideNavbarMerchant />
                 <div className="py-10 md:py-20 flex flex-col md:flex-row w-full">
-                    <div className="w-full md:w-1/2 xxl:w-1/2 px-4">
-                        <div className="flex">
-                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-1/3 border-8 mr-4 border-red-600" alt="" />
+                    <div className="w-full md:w-3/5 xxl:w-1/2 px-4">
+                        <div className="flex flex-col xl:flex-row xl:items-center">
+                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-4/5 xl:w-1/3 border-8 mb-4 xl:mb-0 xl:mr-4 border-red-600 mx-auto" alt="" />
                             {
                                 tableBodyUser.map(x => {
                                     return (
-                                        <div key={x.id} className="md:px-8 w-auto">
+                                        <div key={x.id} className="xl:px-8 w-auto">
                                             <h4 className="text-red-600 text-2xl font-bold">{x.username}</h4>
                                             <p className="text-sm mt-1 font-light text-justify">
                                                 {x.email}
                                             </p>
                                             <div className="flex flex-wrap w-full pt-2">
-                                                <button className="px-4 py-2 w-auto bg-red-600 shadow-md my-2 text-white text-sm font-medium rounded-2xl">Upload New Avatar</button>
-                                                <button className="px-4 py-2 w-auto border shadow-md border-red-600 text-red-600 text-sm font-medium rounded-2xl">Upload New Avatar</button>
+                                                <button className="px-4 mr-4 xl:mx-2 py-2 w-auto bg-red-600 shadow-md my-2 text-white text-xs xl:text-sm font-medium rounded-2xl">Upload New Avatar</button>
+                                                <button className="px-6 py-2 w-auto border border-red-600 shadow-md my-2 text-red-600 text-xs xl:text-sm font-medium rounded-2xl">Delete Avatar</button>
                                             </div>
                                         </div>
                                     )
                                 })
                             }
                         </div>
-                        <div className="user-detail flex justify-center pt-2">
+                        <div className="user-detail flex flex-wrap xl:flex-no-wrap justify-center pt-2">
                             <button className="flex items-center text-sm md:text-base shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-lg bg white text-gray-700">
                                 <FbIcon className="mr-3" /> Connect
                                                 </button>

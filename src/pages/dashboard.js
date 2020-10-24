@@ -5,7 +5,7 @@ import Graph from 'components/Graph'
 
 const Dashboard = () => {
     return (
-        <section className="flex flex-col xl:flex-row ">
+        <section className="flex flex-col xl:flex-row">
             <Sidebar />
             <Graph />
         </section>

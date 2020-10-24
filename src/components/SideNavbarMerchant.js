@@ -18,7 +18,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const SideNavbarMerchant = ({ history }) => {
+const SideNavbarMerchant = () => {
     const classNameSVG = "icon mx-auto"
     const [isOpen, setIsOpen] = React.useState(true)
     const [token] = React.useState(localStorage.getItem('PITO:token'))
@@ -36,7 +36,7 @@ const SideNavbarMerchant = ({ history }) => {
     return (
         <>
             <ToastContainer position="top-right" />
-            <div className="w-full flex justify-between md:hidden bg-gray-800 items-center">
+            <div className="w-full flex justify-between xl:hidden bg-gray-800 items-center">
                 <div className="px-4 py-3">
                     <PitoLogoSmall />
                 </div>

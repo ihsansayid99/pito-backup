@@ -41,11 +41,11 @@ const Supports = () => {
     ]
     return (
         <>
-            <section className="flex flex-col md:flex-row ">
+            <section className="flex flex-col xl:flex-row ">
                 <Sidebar />
                 <div className="py-20 px-5 w-full">
                     <div className="tickets flex justify-end">
-                        <button className="bg-red-600 rounded-2xl px-6 py-2 w-2/5 md:w-1/4 text-white">New Tickets</button>
+                        <button className="bg-red-600 rounded-2xl text-sm xl:text-lg px-6 py-2 w-2/5 md:w-1/4 text-white">New Tickets</button>
                     </div>
                     <div className="flex pt-10 overflow-x-auto">
                         <Table itemHead={tableHeadTickets} itemBodySupport={tableBodySupport} />

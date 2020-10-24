@@ -40,12 +40,12 @@ const Profile = () => {
     ]
     return (
         <>
-            <section className="flex flex-col md:flex-row">
+            <section className="flex flex-col xl:flex-row">
                 <SideNavbarMerchant />
                 <div className="py-10 md:py-20 flex flex-col md:flex-row w-full">
                     <div className="w-full md:w-3/5 xxl:w-1/2 px-4">
-                        <div className="flex items-center">
-                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-1/3 border-8 mr-4 border-red-600 mx-auto" alt="" />
+                        <div className="flex flex-col xl:flex-row xl:items-center">
+                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-4/5 xl:w-1/3 border-8 mb-4 xl:mb-0 xl:mr-4 border-red-600 mx-auto" alt="" />
                             {
                                 tableBodyUser.map(x => {
                                     return (
@@ -77,7 +77,7 @@ const Profile = () => {
                                     )
                                 })
                             }
-                            <div className="w-1/5 hidden md:flex flex-col">
+                            <div className="w-1/5 hidden xl:flex flex-col">
                                 <FbIcon className="mb-4" />
                                 <IgIcon className="mb-4" />
                                 <TtIcon className="mb-4" />
