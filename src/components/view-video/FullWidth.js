@@ -85,7 +85,7 @@ const FullWidth = ({ linkVideo, actionLinks, viewsElement, actions, dataVideos, 
                                         name && <h4 className="font-bold text-xl text-red-600">Tony W.</h4>
                                     }
                                     {
-                                        title && <h4 className="font-bold text-xl text-gray-700">Tittle</h4>
+                                        title && <h4 className="font-bold text-xl text-gray-700">Tittles</h4>
                                     }
                                     <div className="mt-4">
                                         {
