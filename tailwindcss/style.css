@@ -26,10 +26,8 @@
 /* Sidebar */
 .sidebar{
     @apply .bg-gray-800;
-    height: auto;
     width: 165px;
 }
-
 .list-menu svg.icon{
     fill: #666666;
 }

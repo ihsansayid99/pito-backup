@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //import image 
 import ProfilePicture from 'assets/images/profile.png'
@@ -23,6 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SideNavbar = ({ history }) => {
     const classNameSVG = "icon mx-auto"
+    const [isOpen, setIsOpen] = useState(true)
     const [token] = React.useState(localStorage.getItem('PITO:token'))
 
     function logout() {
@@ -34,7 +35,6 @@ const SideNavbar = ({ history }) => {
             }, 3000);
         }
     }
-
     return (
         <>
             <ToastContainer position="top-right" />
@@ -45,10 +45,51 @@ const SideNavbar = ({ history }) => {
                 <div className="mb-navbar flex items-center px-4 py-3">
                     <h5 className="text-white text-sm text-right px-2">Hello, <br /><span className="font-medium text-red-600 text-base">Trumps</span></h5>
                     <img src={ProfilePicture} className="px-2" alt="" />
-                    <Hamburger />
+                    <button onClick={() => setIsOpen(!isOpen)}><Hamburger /></button>
                 </div>
-
             </div>
+
+            <div className={[
+                "h-full fixed overflow-auto z-10 top-0 left-0 bg-gray-800 overflow-x-hidden transition-all duration-150 pt-13", !isOpen ? "w-full" : "w-0"
+            ].join(" ")}>
+                <div className="w-full flex justify-between items-center px-4 py-4">
+                    <PitoLogoSmall className="" />
+                    <button className="py-4 xl:hidden focus:outline-none float-right" onClick={() => setIsOpen(!isOpen)}>
+                        <svg fill="#FFFFFF" viewBox="0 0 20 20" className="w-6 h-6">
+                            <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div className="py-2 w-full">
+                    <section>
+                        <ListMenu linkTo="/">
+                            <DashboardIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/livestream-list">
+                            <LivestreamIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/merchant-list">
+                            <MerchantListIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/user-list">
+                            <UserlistIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/analytic">
+                            <AnalyticIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/tickets">
+                            <TicketIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/categories">
+                            <CategoriesIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu button="button" logout={logout}>
+                            <LogoutIcon className={classNameSVG} />
+                        </ListMenu>
+                    </section>
+                </div>
+            </div>
+
             <div className="sidebar hidden xl:block">
                 <div className="w-full py-4">
                     <button className="px-4 py-4 md:hidden focus:outline-none float-right">

@@ -20,6 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SideNavbarMerchant = ({ history }) => {
     const classNameSVG = "icon mx-auto"
+    const [isOpen, setIsOpen] = React.useState(true)
     const [token] = React.useState(localStorage.getItem('PITO:token'))
 
     function logout() {
@@ -42,11 +43,41 @@ const SideNavbarMerchant = ({ history }) => {
                 <div className="mb-navbar flex items-center px-4 py-3">
                     <h5 className="text-white text-sm text-right px-2">Hello, <br /><span className="font-medium text-red-600 text-base">Trumps</span></h5>
                     <img src={ProfilePicture} className="px-2" alt="" />
-                    <Hamburger />
+                    <button onClick={() => setIsOpen(!isOpen)}><Hamburger /></button>
                 </div>
-
             </div>
-            <div className="sidebar hidden md:block">
+            <div className={[
+                "h-full fixed overflow-y-hidden z-10 top-0 left-0 bg-gray-800 overflow-x-hidden transition-all duration-150 pt-13", !isOpen ? "w-full" : "w-0"
+            ].join(" ")}>
+                <div className="w-full flex justify-between items-center px-4 py-4">
+                    <PitoLogoSmall className="" />
+                    <button className="py-4 xl:hidden focus:outline-none float-right" onClick={() => setIsOpen(!isOpen)}>
+                        <svg fill="#FFFFFF" viewBox="0 0 20 20" className="w-6 h-6">
+                            <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div className="py-2 w-full">
+                    <section>
+                        <ListMenu linkTo="/merchant/dashboard">
+                            <DashboardIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/merchant/profile">
+                            <ProfileIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/merchant/notification">
+                            <NotificationIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu linkTo="/merchant/support">
+                            <TicketIcon className={classNameSVG} />
+                        </ListMenu>
+                        <ListMenu button="button" logout={logout}>
+                            <LogoutIcon className={classNameSVG} />
+                        </ListMenu>
+                    </section>
+                </div>
+            </div>
+            <div className="sidebar hidden xl:block">
                 <div className="w-full py-4">
                     <button className="px-4 py-4 md:hidden focus:outline-none float-right">
                         <svg fill="#FFFFFF" viewBox="0 0 20 20" className="w-6 h-6">
