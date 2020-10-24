@@ -18,7 +18,7 @@ const FullWidth = ({ linkVideo, actionLinks, viewsElement, actions, dataVideos, 
             {
                 dataVideos.map((item, index) => {
                     return (
-                        <div className="flex mb-6 flex-col md:flex-row" key={index}>
+                        <div className="flex mb-6 flex-col lg:flex-row" key={index}>
                             <div className="flex">
                                 <div className="item relative w-auto">
                                     <Link to={`/merchant/livestream/${item.id}`} className="link-wrapped">
@@ -37,7 +37,7 @@ const FullWidth = ({ linkVideo, actionLinks, viewsElement, actions, dataVideos, 
                                                 ) : null
                                             }
                                             <PlayIcon className="icon" />
-                                            <img src={item.thumbnail} alt="" className="thumbnail-live" width={300} />
+                                            <img src={item.thumbnail} alt="" className="thumbnail-live" />
                                         </figure>
                                     </Link>
                                 </div>
@@ -62,21 +62,21 @@ const FullWidth = ({ linkVideo, actionLinks, viewsElement, actions, dataVideos, 
                                             <h4 className="font-bold text-xl text-red-600">{item.shared}</h4>
                                             <span className="text-sm text-gray-300 font-light">Shared</span>
                                         </div>
-                                        <div className="mr-8 md:mb-3 md:mr-0 leading-tight text-center">
+                                        <div className="mr-2 md:mb-3 md:mr-0 leading-tight text-center">
                                             {
                                                 item?.live ? (
                                                     <h4 className="font-bold text-xl text-red-600">Live Now</h4>
                                                 ) : (
                                                         <>
                                                             <h4 className="font-bold text-xl text-red-600">{item.date}</h4>
-                                                            <span className="text-sm text-gray-300 font-light">Day(s) ago</span>
+                                                            <span className="text-sm text-gray-300 font-light whitespace-no-wrap">Day(s) ago</span>
                                                         </>
                                                     )
                                             }
                                         </div>
-                                        <div className="flex-col flex md:hidden mx-auto px-4 leading-tight xl:w-3/12 xxl:w-1/4">
-                                            <button className="bg-red-600 text-sm rounded-full w-full px-6 py-2 mb-2 font-medium text-white focus:outline-none">Edit</button>
-                                            <button className="border border-red-600 text-sm rounded-full w-full px-6 py-2 font-medium text-red-600 focus:outline-none">Disable</button>
+                                        <div className="flex-col flex md:hidden mx-auto mt-2 px-4 leading-tight">
+                                            <button className="bg-red-600 text-sm rounded-full w-full px-2 py-2 mb-2 font-medium text-white focus:outline-none">Edit</button>
+                                            <button className="border border-red-600 text-sm rounded-full w-full px-2 py-2 font-medium text-red-600 focus:outline-none">Disable</button>
                                         </div>
                                     </div>
                                 }
@@ -92,7 +92,7 @@ const FullWidth = ({ linkVideo, actionLinks, viewsElement, actions, dataVideos, 
                                             subtitle && <h5 className="text-gray-700 font-semibold mb-2">Title Lorem Ipsum...</h5>
                                         }
                                         {
-                                            caption && <p className="text-justify" style={{ width: 420 }}>
+                                            caption && <p className="text-justify text-sm md:text-base break-all">
                                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
                                                         </p>
                                         }
@@ -113,7 +113,7 @@ const FullWidth = ({ linkVideo, actionLinks, viewsElement, actions, dataVideos, 
                                             </div>
                                         }
                                         {
-                                            category && <div className="flex text-xs text-gray-700 mt-4 items-center">
+                                            category && <div className="flex flex-wrap text-xs text-gray-700 mt-4 items-center">
                                                 <h6>Category 1</h6><div className="rounded-full w-2 h-2 bg-gray-700 mx-2"></div>
                                                 <h6>Category 2</h6><div className="rounded-full w-2 h-2 bg-gray-700 mx-2"></div>
                                                 <h6>Category 3</h6>

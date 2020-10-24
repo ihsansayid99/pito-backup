@@ -36,21 +36,12 @@ const Lines = () => {
                         }
                     }}
                 />
-<<<<<<< HEAD
-                <div className="mt-8 flex">
-                    <div className="w-1/2 text-right px-5 mr-4">
-                        <span className="font-semibold text-lg text-gray-400">TOTAL PITO USER</span>
-                        <h2 className="font-semibold text-5xl text-red-600">223.560</h2>
-                    </div>
-                    <div className="w-1/2 text-justify">
-=======
                 <div className="mt-8 w-full flex flex-col lg:flex-row">
                     <div className="lg:w-1/2 text-right md:px-5">
                         <span className="font-semibold text-lg text-gray-400">TOTAL PITO USER</span>
                         <h2 className="font-semibold text-5xl text-red-600">223.560</h2>
                     </div>
                     <div className="lg:w-1/2 text-justify">
->>>>>>> responsive all dashboard admin
                         <p className="font-light text-xs">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodMERCHANTGRAPH
                                 </p>

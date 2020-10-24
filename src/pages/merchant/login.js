@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 //import image 
-import CPLOGIN from 'assets/images/cp-login.png'
+import PHONE from 'assets/images/handphone.png'
 import { ReactComponent as PitoLogo } from 'assets/images/pito.svg'
 import { ReactComponent as LoginIcon } from 'assets/images/login-icon.svg'
 import { ReactComponent as PasswordIcon } from 'assets/images/password-icon.svg'
@@ -69,14 +69,14 @@ const Login = ({ history }) => {
     return (
         <section className="login-clipping w-full">
             <ToastContainer position="top-right" />
-            <div className="clipper hidden md:block"></div>
-            <div className="hidden md:absolute md:block">
-                <img draggable="false" src={CPLOGIN} alt="pito logo" />
+            <div className="clipper hidden xl:block"></div>
+            <div className="img-phone xl:w-1/2 hidden xl:absolute py-20 xl:flex justify-end">
+                <img draggable="false" src={PHONE} alt="pito logo" />
             </div>
-            <div className="container mx-auto flex justify-end py-20">
-                <div className="w-full md:w-1/2 md:px-24">
+            <div className="form-login container mx-auto flex justify-end py-16 xl:py-12 xxl:py-20">
+                <div className="w-full xl:w-1/2 md:px-24">
                     <PitoLogo className="mx-auto" />
-                    <div className="pt-24 px-10">
+                    <div className="pt-4 xl:pt-2 xxl:pt-24 px-10">
                         <form onSubmit={submit}>
                             <div className={["pt-10 flex border-b-2 items-center pb-2 text-xl", errors ? "border-red-600" : "border-gray-400"].join(" ")}>
                                 <LoginIcon />
@@ -93,23 +93,23 @@ const Login = ({ history }) => {
                         </form>
                     </div>
 
-                    <div className="socmed-icon-login flex justify-center items-center mt-12">
-                        <h6 className="text-lg font-light text-gray-700 px-4">Or Continue with
+                    <div className="socmed-icon-login flex justify-center items-center mt-6 xl:mt-6 xxl:mt-12">
+                        <h6 className="md:text-lg font-light text-gray-700 px-4">Or Continue with
                         </h6>
                         <span className="flex"><FbIcon className="mr-4" /> <GoogleIcon /></span>
                     </div>
 
-                    <div className="flex flex-col mt-8">
-                        <h6 className="text-lg font-light mx-auto text-gray-700 px-4">Not a member yet?
+                    <div className="flex flex-col mt-4 xl:mt-2 xxl:mt-8">
+                        <h6 className="md:text-lg font-light mx-auto text-gray-700 px-4">Not a member yet?
                         </h6>
-                        <h6 className="text-lg font-light mx-auto text-gray-700 px-4"><span className="font-medium text-red-600">Create Accout</span> Via Download Pito App
+                        <h6 className="md:text-lg font-light mx-auto text-gray-700 px-4"><span className="font-medium text-red-600">Create Accout</span> Via Download Pito App
                         </h6>
                         <div className="flex px-4 mx-auto">
                             <GoogleplaySign className="w-40 mr-4" />
                             <AppstoreSign className="w-40" />
                         </div>
                         <div className="px-4 mx-auto">
-                            <h6 className="text-lg font-light text-gray-700 px-4">Contact Pito at admin@pito.com.sg</h6>
+                            <h6 className="md:text-lg font-light text-gray-700 px-4">Contact Pito at admin@pito.com.sg</h6>
                         </div>
                     </div>
 

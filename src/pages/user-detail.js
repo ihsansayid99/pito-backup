@@ -57,13 +57,13 @@ const UserDetail = ({ match }) => {
     ]
     return (
         <>
-            <section className="flex flex-col md:flex-row">
+            <section className="flex flex-col xl:flex-row">
                 <Sidebar />
 
-                <div className="py-10 md:py-20 flex-col md:flex md:flex-row w-full">
-                    <div className="w-full md:w-3/5 px-4">
-                        <div className="flex items-center">
-                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-1/3 border-8 mr-4 border-red-600 mx-auto" alt="" />
+                <div className="py-10 md:py-20 flex flex-col xl:flex-row w-full xxl:px-6">
+                    <div className="w-full xl:w-3/5 xxl:w-3/5 px-4">
+                        <div className="flex flex-col xl:flex-row xl:items-center">
+                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-4/5 xl:w-1/3 border-8 mb-4 xl:mb-0 xl:mr-4 border-red-600 mx-auto" alt="" />
                             {
                                 tableBodyUser.filter(x => x.id === match.params.id).map(x => {
                                     return (
@@ -94,7 +94,7 @@ const UserDetail = ({ match }) => {
                                 })
                             }
                         </div>
-                        <div className="user-detail flex md:hidden ">
+                        <div className="user-detail flex flex-wrap xl:flex-no-wrap md:hidden ">
                             <button className="flex items-center text-sm md:text-base shadow-md mr-4 px-6 mt-4 py-2 border border-gray-50 rounded-3xl bg white text-gray-700">
                                 <FbIcon className="mr-3" /> Connect
                                                 </button>
@@ -125,11 +125,11 @@ const UserDetail = ({ match }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-2/5 px-4 flex flex-col">
+                    <div className="w-full xl:w-2/5 px-4 flex flex-col">
                         <div className="pt-20 px-4 hidden md:block">
                             <h5 className="text-gray-700 font-light text-lg">Change Display Name</h5>
-                            <input type="text" placeholder="Display Name" className="rounded-lg border w-4/5 border-gray-50 px-2 py-2 my-2 focus:outline-none" />
-                            <div className="w-4/5 mt-2">
+                            <input type="text" placeholder="Display Name" className="rounded-lg border w-full border-gray-50 px-2 py-2 my-2 focus:outline-none" />
+                            <div className="w-auto mt-2">
                                 <button className="rounded-3xl float-right px-10 py-3 bg-red-600 text-white text-lg font-medium">Save</button>
                             </div>
                         </div>
@@ -143,9 +143,9 @@ const UserDetail = ({ match }) => {
                                     <AvatarDummy />
                                     <div className="px-4">
                                         <h5 className="font-semibold text-base text-gray-700">Merchant Name</h5>
-                                        <div className="flex mt-2 items-center">
-                                            <p className="text-sm text-gray-900 font-light">3,9 subscribers</p> <div className="rounded-full w-1 h-1 bg-gray-700 mx-2"></div>
-                                            <p className="text-sm text-gray-900 font-light">23 Livestreams</p>
+                                        <div className="flex flex-wrap mt-2 items-center">
+                                            <p className="text-xs md:text-sm text-gray-900 font-light">3,9 subscribers</p> <div className="rounded-full w-1 h-1 bg-gray-700 mx-2"></div>
+                                            <p className="text-xs md:text-sm text-gray-900 font-light">23 Livestreams</p>
                                         </div>
                                         <div className="flex flex-wrap text-sm font-medium text-gray-400 items-center mt-2">
                                             <h6>Category 1</h6><div className="rounded-full w-1 h-1 bg-gray-200 mx-2"></div>
@@ -158,9 +158,9 @@ const UserDetail = ({ match }) => {
                                     <AvatarDummy />
                                     <div className="px-4">
                                         <h5 className="font-semibold text-base text-gray-700">Merchant Name</h5>
-                                        <div className="flex mt-2 items-center">
-                                            <p className="text-sm text-gray-900 font-light">3,9 subscribers</p> <div className="rounded-full w-1 h-1 bg-gray-700 mx-2"></div>
-                                            <p className="text-sm text-gray-900 font-light">23 Livestreams</p>
+                                        <div className="flex flex-wrap mt-2 items-center">
+                                            <p className="text-xs md:text-sm text-gray-900 font-light">3,9 subscribers</p> <div className="rounded-full w-1 h-1 bg-gray-700 mx-2"></div>
+                                            <p className="text-xs md:text-sm text-gray-900 font-light">23 Livestreams</p>
                                         </div>
                                         <div className="flex flex-wrap text-sm font-medium text-gray-400 items-center mt-2">
                                             <h6>Category 1</h6><div className="rounded-full w-1 h-1 bg-gray-200 mx-2"></div>
@@ -173,11 +173,11 @@ const UserDetail = ({ match }) => {
                                     <AvatarDummy />
                                     <div className="px-4">
                                         <h5 className="font-semibold text-base text-gray-700">Merchant Name</h5>
-                                        <div className="flex mt-2 items-center">
-                                            <p className="text-sm text-gray-900 font-light">3,9 subscribers</p> <div className="rounded-full w-1 h-1 bg-gray-700 mx-2"></div>
-                                            <p className="text-sm text-gray-900 font-light">23 Livestreams</p>
+                                        <div className="flex flex-wrap mt-2 items-center">
+                                            <p className="text-xs md:text-sm text-gray-900 font-light">3,9 subscribers</p> <div className="rounded-full w-1 h-1 bg-gray-700 mx-2"></div>
+                                            <p className="text-xs md:text-sm text-gray-900 font-light">23 Livestreams</p>
                                         </div>
-                                        <div className="flex flex-wrap text-sm font-medium text-gray-400 items-center mt-2">
+                                        <div className="flex flex-wrap text-xs md:text-sm font-medium text-gray-400 items-center mt-2">
                                             <h6>Category 1</h6><div className="rounded-full w-1 h-1 bg-gray-200 mx-2"></div>
                                             <h6>Category 2</h6><div className="rounded-full w-1 h-1 bg-gray-200 mx-2"></div>
                                             <h6>Category 3</h6>

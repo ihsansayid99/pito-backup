@@ -2,8 +2,8 @@ import React from 'react'
 import { ReactComponent as Pito } from 'assets/images/pito.svg'
 const ForgotPassword = () => {
     return (
-        <div className="fp bg-white md:bg-red-600 md:py-20">
-            <div className="fp-controller bg-white md:rounded-2xl md:w-2/5 mx-auto px-6 py-20 xxl:py-40">
+        <div className="fp bg-white md:bg-red-600 md:py-20 md:px-10 xl:px-0">
+            <div className="fp-controller bg-white md:rounded-2xl xl:w-2/5 mx-auto px-6 py-20 xxl:py-40">
                 <Pito className="mx-auto" />
                 <div className="mt-20 xl:mt-16 xxl:mt-32 flex flex-col px-6 md:px-10">
                     <h5 className="text-red-600 font-bold text-xl">Forgot Password?</h5>

@@ -56,17 +56,17 @@ const MerchantDetail = ({ match }) => {
     ]
     return (
         <>
-            <section className="flex flex-col md:flex-row">
+            <section className="flex flex-col xl:flex-row">
                 <Sidebar />
 
                 <div className="py-10 md:py-20 flex flex-col md:flex-row w-full">
                     <div className="w-full md:w-3/5 xxl:w-1/2 px-4">
-                        <div className="flex items-center">
-                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-1/3 border-8 mr-4 border-red-600 mx-auto" alt="" />
+                        <div className="flex flex-col xl:flex-row xl:items-center">
+                            <img src={userAvatarDummy} draggable={false} className="rounded-full w-4/5 xl:w-1/3 border-8 mb-4 xl:mb-0 xl:mr-4 border-red-600 mx-auto" alt="" />
                             {
                                 tableBodyUser.filter(x => x.id === match.params.id).map(x => {
                                     return (
-                                        <div key={x.id} className="md:px-8 w-auto">
+                                        <div key={x.id} className="xl:px-8 w-auto">
                                             <h4 className="text-red-600 text-2xl font-bold">{x.username}</h4>
                                             <p className="text-sm mt-1 font-light text-justify">
                                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -94,15 +94,15 @@ const MerchantDetail = ({ match }) => {
                                     )
                                 })
                             }
-                            <div className="w-1/5 hidden md:flex flex-col">
+                            <div className="w-1/5 hidden xl:flex flex-col">
                                 <FbIcon className="mb-4" />
                                 <IgIcon className="mb-4" />
                                 <TtIcon className="mb-4" />
                             </div>
                         </div>
-                        <div className="flex flex-wrap pt-8">
-                            <button className="rounded-3xl text-sm md:text-base font-medium mr-2 md:mr-6 text-red-600 border border-red-600 px-6 py-2 md:px-12 md:py-2">Disable</button>
-                            <button className="rounded-3xl text-sm md:text-base font-medium mr-2 md:mr-6 text-white bg-red-600 px-6 py-2 md:px-10 md:py-2">Edit Account</button>
+                        <div className="flex flex-wrap pt-8 justify-center">
+                            <button className="rounded-3xl text-sm md:text-base font-medium mr-2 mb-2 xl:mb-0 md:mr-6 text-red-600 border border-red-600 px-6 py-2 md:px-12 md:py-2">Disable</button>
+                            <button className="rounded-3xl text-sm md:text-base font-medium mr-2 mb-2 xl:mb-0 md:mr-6 text-white bg-red-600 px-6 py-2 md:px-10 md:py-2">Edit Account</button>
                             <button className="rounded-3xl text-sm md:text-base font-medium text-white bg-red-600 px-6 py-2 md:px-10 md:py-2">Create Livestreams</button>
                         </div>
                         <div className="pt-8">

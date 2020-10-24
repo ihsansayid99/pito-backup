@@ -57,7 +57,7 @@ const videos = [
 const LivestreamList = () => {
     return (
         <>
-            <section className="flex flex-col md:flex-row ">
+            <section className="flex flex-col xl:flex-row ">
                 <Sidebar />
                 <div className="py-20 px-5 w-full">
                     <div className="flex flex-col md:flex-row md:justify-between items-center">

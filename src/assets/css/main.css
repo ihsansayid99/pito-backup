@@ -19705,7 +19705,7 @@ video {
 /* Login */
 
 .login-clipping{
-  position: relative;
+  position: fixed;
   height: 900px;
   overflow: hidden;
 }
@@ -19788,6 +19788,10 @@ item:hover figure.item-image svg.icon{
 .item figure.item-image-live{
   position: relative;
   perspective: 10000px;
+}
+
+.item-image-live .thumbnail-live{
+  width: 500px
 }
 
 .item:hover figure.item-image-live svg.icon{
@@ -19988,27 +19992,56 @@ item:hover figure.item-image-live-detail svg.icon{
   width: 15%;
 }
 
-<<<<<<< HEAD
-@media all and (max-width: 640px) {
-=======
-@media only screen and (min-width: 320px) {
->>>>>>> responsive all dashboard admin
-  .item-image-live .thumbnail-live{
-    width: 400px
+.img-phone img{
+  height: 80vh;
+}
+
+.form-login{
+  height: 80vh;
+}
+
+.item-image-user img{
+  width: 291px;
+  height: 159px;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .item-image img{
+    width: 700px;
   }
 
   .item figure.item-image-live .live-viewers{
     content: "";
     position: absolute;
     top: 0;
-    left: 15%;
+    left: 10%;
   }
 
   .item figure.item-image-live .live-viewers-wrap{
     content: "";
     position: absolute;
     top: 0;
-    left: 15%;
+    left: 10%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .item-image-live .thumbnail-live{
+    width: 350px;
+  }
+
+  .item figure.item-image-live .live-viewers{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+  }
+
+  .item figure.item-image-live .live-viewers-wrap{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
   }
 
   .user-detail button svg{
@@ -20027,19 +20060,15 @@ item:hover figure.item-image-live-detail svg.icon{
   .notif-minute{
     width: 25%;
   }
-<<<<<<< HEAD
-=======
 
   .item-image img{
     width: 400px;
   }
-}
 
-@media only screen and (min-width: 768px) {
-  .item-image img{
-    width: 700px;
+  .item-image-user img{
+    width: 400px;
+    height: 200px;
   }
->>>>>>> responsive all dashboard admin
 }
 
 @media (min-width: 640px){
@@ -115510,8 +115539,5 @@ item:hover figure.item-image-live-detail svg.icon{
   .xxl\:animate-bounce{
     animation: bounce 1s infinite;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> responsive all dashboard admin
+
