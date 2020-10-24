@@ -11,7 +11,7 @@ const Dropdown = ({ title, items = [] }) => {
         setTitles(item)
     }
     return (
-        <div className="dd-wrapper border border-gray-100 w-56 px-2 py-2">
+        <div className="dd-wrapper border z-30 border-gray-100 w-56 px-2 py-2">
             <div role="button" onKeyPress={() => toggle(!open)}
                 onClick={() => toggle(!open)} className="dd-header flex justify-between">
                 <div className="dd-header_title">
