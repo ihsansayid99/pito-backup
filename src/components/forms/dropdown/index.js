@@ -22,7 +22,7 @@ const Dropdown = ({ title, items = [] }) => {
                 </div>
             </div>
             {open && (
-                <ul className="dd-list flex-col py-3 absolute border border-gray-100 bg-white w-56 -mx-2 my-2">
+                <ul className="dd-list flex-col py-3 absolute border border-gray-100 bg-white w-auto -mx-2 my-2">
                     {
                         items.map(item => (
                             <li className="dd-list-item px-4 py-1" key={item.id}>
