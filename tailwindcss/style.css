@@ -202,10 +202,14 @@ item:hover figure.item-image-user svg.icon{
 
 .mb-navbar svg{
     fill: #585959;
+    width: 25px;
+    height: 25px;
 }
 
 .tickets svg{
     fill: #df472d;
+    width: 47px;
+    width: 45px;
 }
 
 .socmed-icon-login svg{

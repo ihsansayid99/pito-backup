@@ -43,14 +43,14 @@ const SideNavbar = ({ history }) => {
                     <PitoLogoSmall />
                 </div>
                 <div className="mb-navbar flex items-center px-4 py-3">
-                    <h5 className="text-white text-sm text-right px-2">Hello, <br /><span className="font-medium text-red-600 text-base">Trumps</span></h5>
-                    <img src={ProfilePicture} className="px-2" alt="" />
+                    <h5 className="text-white text-xs text-right px-2">Hello, <br /><span className="font-medium text-red-600 text-sm">Trumps</span></h5>
+                    <img src={ProfilePicture} className="px-2 w-20" alt="" />
                     <button onClick={() => setIsOpen(!isOpen)}><Hamburger /></button>
                 </div>
             </div>
 
             <div className={[
-                "h-full fixed overflow-auto z-10 top-0 left-0 bg-gray-800 overflow-x-hidden transition-all duration-150 pt-13", !isOpen ? "w-full" : "w-0"
+                "h-full fixed overflow-auto z-40 top-0 left-0 bg-gray-800 overflow-x-hidden transition-all duration-150 pt-13", !isOpen ? "w-full" : "w-0"
             ].join(" ")}>
                 <div className="w-full flex justify-between items-center px-4 py-4">
                     <PitoLogoSmall className="" />
